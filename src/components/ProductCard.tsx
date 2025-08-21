@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import { Card, Button, Popconfirm } from 'antd';
-import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
-import { Product } from '@/types';
+import { Card, Button, Popconfirm } from "antd";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Product } from "@/types";
+import Image from "next/image";
 
 const { Meta } = Card;
 
@@ -16,7 +17,17 @@ const ProductCard = ({ product, onEdit, onDelete }: ProductCardProps) => {
     return (
         <Card
             hoverable
-            cover={<img alt={product.name} src={product.imageUrl} style={{ height: 200, objectFit: 'cover' }} />}
+            cover={
+                <div className="relative h-48 w-full">
+                    <Image
+                        alt={product.name}
+                        src={product.imageUrl}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover"
+                    />
+                </div>
+            }
             actions={[
                 <Button type="text" icon={<EditOutlined />} key="edit" onClick={() => onEdit(product)} />,
                 <Popconfirm
@@ -35,8 +46,8 @@ const ProductCard = ({ product, onEdit, onDelete }: ProductCardProps) => {
                 title={product.name}
                 description={
                     <>
-                        <div>{`Rp ${product.price.toLocaleString('id-ID')}`}</div>
-                        <div style={{ color: 'gray', fontSize: '12px' }}>SKU: {product.sku}</div>
+                        <div className="text-base font-semibold">{`Rp ${product.price.toLocaleString("id-ID")}`}</div>
+                        <div className="text-sm text-gray-500">SKU: {product.sku}</div>
                     </>
                 }
             />
