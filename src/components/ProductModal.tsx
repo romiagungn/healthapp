@@ -1,6 +1,6 @@
 "use client";
 
-import { Modal, Form, Input, InputNumber, Button, Upload } from "antd";
+import { Modal, Form, Input, InputNumber, Button, Upload, notification } from "antd";
 import type { UploadProps } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { Product } from "@/types";
@@ -56,10 +56,19 @@ const ProductModal = ({ open, onCancel, onFinish, initialData, confirmLoading }:
 
             form.setFieldsValue({ imageUrl: publicUrl });
             onSuccess?.(publicUrl);
-        } catch (error: any) {
-            console.log(error)
+        } catch (error: unknown) {
             console.error("Upload error:", error);
-            onError?.(error);
+
+            notification.error({
+                message: "Upload Gagal",
+                description: "Gagal mengunggah gambar. Silakan coba lagi.",
+            });
+
+            if (error instanceof Error) {
+                onError?.(error);
+            } else {
+                onError?.(new Error("Terjadi kesalahan yang tidak diketahui."));
+            }
         }
     };
 
