@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 Healthshop Web App
 
-## Getting Started
+Aplikasi web **full-stack** untuk manajemen produk kesehatan.  
+Proyek ini dibuat sebagai bagian dari tes proyek **Fullstack Engineer**, mencakup Backend, Frontend, Database, dan Autentikasi.
 
-First, run the development server:
+---
+
+## ✨ Fitur Utama
+
+✅ **Autentikasi Pengguna** – Sistem login & logout yang aman menggunakan Next-Auth  
+✅ **Manajemen Produk (CRUD)** – Tambah, lihat, edit, hapus produk  
+✅ **Upload Gambar** – Simpan gambar produk ke Cloud Storage  
+✅ **Infinite Scroll** – Produk otomatis dimuat saat scroll  
+✅ **Rute Terproteksi** – Halaman manajemen hanya bisa diakses setelah login
+
+---
+
+## 🚀 Tech Stack
+
+| Kategori                   | Teknologi                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------- |
+| **Framework**              | [Next.js](https://nextjs.org/) (App Router)                                     |
+| **Styling**                | [Tailwind CSS](https://tailwindcss.com/)                                        |
+| **Komponen UI**            | [Ant Design (AntD)](https://ant.design/)                                        |
+| **Database**               | [PostgreSQL](https://www.postgresql.org/) via [Supabase](https://supabase.com/) |
+| **ORM**                    | [Prisma](https://www.prisma.io/)                                                |
+| **Autentikasi**            | [Next-Auth (Auth.js)](https://next-auth.js.org/)                                |
+| **Manajemen State Server** | [TanStack Query](https://tanstack.com/query/latest)                             |
+| **Penyimpanan File**       | [Supabase Storage](https://supabase.com/storage)                                |
+
+---
+
+## ⚙️ Setup & Instalasi (Satu Bagan)
+
+Jalankan langkah berikut di terminal:
 
 ```bash
+# Clone repository
+git clone <repo-url>
+cd healthshop-web-app
+
+# Install dependencies
+npm install
+# atau
+yarn install
+
+# Tambahkan file .env di root project dengan isi berikut:
+DATABASE_URL="postgresql://postgres:%40Binatang1234@db.xijgtrgncigduqiqqeoc.supabase.co:5432/postgres?pgbouncer=true"
+NEXTAUTH_SECRET="TUsf9nHLC5nrpYx7S/4i+KBMARP9UvLiLktUpfAlrG4="
+NEXTAUTH_URL="http://localhost:3000"
+NEXT_PUBLIC_SUPABASE_URL="https://xijgtrgncigduqiqqeoc.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+
+# Jalankan aplikasi secara lokal
 npm run dev
-# or
+# atau
 yarn dev
-# or
+# atau
 pnpm dev
-# or
+# atau
 bun dev
+
+# Buka di browser
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔎 Credential, 📚 Learn More, & ☁️ Deploy (Satu Bagan)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```md
+🔑 Credential Login
 
-## Learn More
+- Email: admin@gmail.com
+- Password: admin
 
-To learn more about Next.js, take a look at the following resources:
+📚 Learn More
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js Docs: https://nextjs.org/docs
+- Learn Next.js: https://nextjs.org/learn
+- Next.js GitHub: https://github.com/vercel/next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+☁️ Deploy to Vercel
 
-## Deploy on Vercel
+1. Buat akun & project di Vercel
+2. Hubungkan repo Git (GitHub/GitLab/Bitbucket)
+3. Deploy dengan default config Next.js
+4. Set environment variable (.env) pada Project Settings → Environment Variables
+5. Redeploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔗 Quick Link Deploy: https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme
+```
