@@ -1,11 +1,6 @@
 # 🏥 Healthshop Web App
 
-Aplikasi web **full-stack** untuk manajemen produk kesehatan.  
-Proyek ini dibuat sebagai bagian dari tes proyek **Fullstack Engineer**, mencakup Backend, Frontend, Database, dan Autentikasi.
-
----
-
-## ✨ Fitur Utama
+## Fitur Utama
 
 ✅ **Autentikasi Pengguna** – Sistem login & logout yang aman menggunakan Next-Auth  
 ✅ **Manajemen Produk (CRUD)** – Tambah, lihat, edit, hapus produk  
@@ -15,29 +10,27 @@ Proyek ini dibuat sebagai bagian dari tes proyek **Fullstack Engineer**, mencaku
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 | Kategori                   | Teknologi                                                                       |
 | -------------------------- | ------------------------------------------------------------------------------- |
 | **Framework**              | [Next.js](https://nextjs.org/) (App Router)                                     |
 | **Styling**                | [Tailwind CSS](https://tailwindcss.com/)                                        |
 | **Komponen UI**            | [Ant Design (AntD)](https://ant.design/)                                        |
-| **Database**               | [PostgreSQL](https://www.postgresql.org/) via [Supabase](https://supabase.com/) |
-| **ORM**                    | [Prisma](https://www.prisma.io/)                                                |
-| **Autentikasi**            | [Next-Auth (Auth.js)](https://next-auth.js.org/)                                |
+| **Database**               | [Prisma] [PostgreSQL] via [Supabase](https://supabase.com/)                     |
 | **Manajemen State Server** | [TanStack Query](https://tanstack.com/query/latest)                             |
 | **Penyimpanan File**       | [Supabase Storage](https://supabase.com/storage)                                |
 
 ---
 
-## ⚙️ Setup & Instalasi (Satu Bagan)
+## Setup & Instalasi (Satu Bagan)
 
 Jalankan langkah berikut di terminal:
 
 ```bash
 # Clone repository
 git clone <repo-url>
-cd healthshop-web-app
+cd healthapp
 
 # Install dependencies
 npm install
