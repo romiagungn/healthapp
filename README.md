@@ -39,10 +39,13 @@ yarn install
 
 # Tambahkan file .env di root project dengan isi berikut:
 DATABASE_URL="postgresql://postgres:%40Binatang1234@db.xijgtrgncigduqiqqeoc.supabase.co:5432/postgres?pgbouncer=true"
-NEXTAUTH_SECRET="TUsf9nHLC5nrpYx7S/4i+KBMARP9UvLiLktUpfAlrG4="
+NEXTAUTH_SECRET="yBPmUFXtyqdc1YNF/0bv1630OtQEVaX5JOJ595UlEow="
 NEXTAUTH_URL="http://localhost:3000"
 NEXT_PUBLIC_SUPABASE_URL="https://xijgtrgncigduqiqqeoc.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpamd0cmduY2lnZHVxaXFxZW9jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU3Nzk5ODAsImV4cCI6MjA3MTM1NTk4MH0.Vo_RfmS7e6zFUfgT8H6EwiYK9Qwitb_VhZvlW1K9LVo"
+
+# Lakukan generate prisma database
+prisma generate
 
 # Jalankan aplikasi secara lokal
 npm run dev
